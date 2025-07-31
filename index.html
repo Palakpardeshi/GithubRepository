@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood-Based Music Suggestion</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f9d423, #ff4e50);
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .mood-buttons button {
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .mood-buttons button:hover {
+      transform: scale(1.1);
+    }
+
+    #suggestion {
+      margin-top: 40px;
+    }
+
+    #suggestion img {
+      width: 300px;
+      border-radius: 10px;
+    }
+
+    a {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #333;
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      width: fit-content;
+      margin: 10px auto;
+    }
+
+    a:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎵 Mood-Based Music Suggestion</h1>
+  <p>Select your current mood:</p>
+
+  <div class="mood-buttons">
+    <button style="background-color: #ffcc00;" onclick="showSuggestion('happy')">Happy</button>
+    <button style="background-color: #007bff;" onclick="showSuggestion('sad')">Sad</button>
+    <button style="background-color: #28a745;" onclick="showSuggestion('energetic')">Energetic</button>
+    <button style="background-color: #6c757d;" onclick="showSuggestion('relax')">Relax</button>
+  </div>
+
+  <div id="suggestion"></div>
+
+  <script>
+    const musicData = {
+      happy: {
+        song: "Pharrell Williams - Happy",
+        image: "https://img.youtube.com/vi/ZbZSe6N_BXs/0.jpg",
+        link: "https://www.youtube.com/watch?v=ZbZSe6N_BXs"
+      },
+      sad: {
+        song: "Adele - Someone Like You",
+        image: "https://img.youtube.com/vi/hLQl3WQQoQ0/0.jpg",
+        link: "https://www.youtube.com/watch?v=hLQl3WQQoQ0"
+      },
+      energetic: {
+        song: "Imagine Dragons - Believer",
+        image: "https://img.youtube.com/vi/7wtfhZwyrcc/0.jpg",
+        link: "https://www.youtube.com/watch?v=7wtfhZwyrcc"
+      },
+      relax: {
+        song: "Weightless - Marconi Union",
+        image: "https://img.youtube.com/vi/UfcAVejslrU/0.jpg",
+        link: "https://www.youtube.com/watch?v=UfcAVejslrU"
+      }
+    };
+
+    function showSuggestion(mood) {
+      const data = musicData[mood];
+      const container = document.getElementById('suggestion');
+      container.innerHTML = `
+        <h2>${data.song}</h2>
+        <img src="${data.image}" alt="${mood} music">
+        <a href="${data.link}" target="_blank">🎧 Listen on YouTube</a>
+      `;
+    }
+  </script>
+
+</body>
+</html>
