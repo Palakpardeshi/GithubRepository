@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Mood-Based Music Suggestion</title>
+  <title>🎶 मन के मूड पर म्यूजिक 🎶</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -59,14 +59,14 @@
 </head>
 <body>
 
-  <h1>🎵 Mood-Based Music Suggestion</h1>
-  <p>Select your current mood:</p>
+  <h1>🎵 मन के मूड पर म्यूजिक 🎵</h1>
+  <p>अपने मूड के अनुसार गाना चुनें:</p>
 
   <div class="mood-buttons">
-    <button style="background-color: #ffcc00;" onclick="showSuggestion('happy')">Happy</button>
-    <button style="background-color: #007bff;" onclick="showSuggestion('sad')">Sad</button>
-    <button style="background-color: #28a745;" onclick="showSuggestion('energetic')">Energetic</button>
-    <button style="background-color: #6c757d;" onclick="showSuggestion('relax')">Relax</button>
+    <button style="background-color: #ffcc00;" onclick="showSuggestion('happy')">😄 Happy</button>
+    <button style="background-color: #007bff;" onclick="showSuggestion('sad')">😢 Sad</button>
+    <button style="background-color: #28a745;" onclick="showSuggestion('energetic')">⚡ Energetic</button>
+    <button style="background-color: #6c757d;" onclick="showSuggestion('relax')">🌙 Relax</button>
   </div>
 
   <div id="suggestion"></div>
@@ -74,24 +74,24 @@
   <script>
     const musicData = {
       happy: {
-        song: "Pharrell Williams - Happy",
-        image: "https://img.youtube.com/vi/ZbZSe6N_BXs/0.jpg",
-        link: "https://www.youtube.com/watch?v=ZbZSe6N_BXs"
+        song: "London Thumakda – Queen",
+        image: "https://img.youtube.com/vi/OdjBG7bDk8A/0.jpg",
+        link: "https://www.youtube.com/watch?v=OdjBG7bDk8A"
       },
       sad: {
-        song: "Adele - Someone Like You",
-        image: "https://img.youtube.com/vi/hLQl3WQQoQ0/0.jpg",
-        link: "https://www.youtube.com/watch?v=hLQl3WQQoQ0"
+        song: "Channa Mereya – Ae Dil Hai Mushkil",
+        image: "https://img.youtube.com/vi/284Ov7ysmfA/0.jpg",
+        link: "https://www.youtube.com/watch?v=284Ov7ysmfA"
       },
       energetic: {
-        song: "Imagine Dragons - Believer",
-        image: "https://img.youtube.com/vi/7wtfhZwyrcc/0.jpg",
-        link: "https://www.youtube.com/watch?v=7wtfhZwyrcc"
+        song: "Zinda – Bhaag Milkha Bhaag",
+        image: "https://img.youtube.com/vi/u3R0C9J4xWg/0.jpg",
+        link: "https://www.youtube.com/watch?v=u3R0C9J4xWg"
       },
       relax: {
-        song: "Weightless - Marconi Union",
-        image: "https://img.youtube.com/vi/UfcAVejslrU/0.jpg",
-        link: "https://www.youtube.com/watch?v=UfcAVejslrU"
+        song: "Raabta – Agent Vinod",
+        image: "https://img.youtube.com/vi/KaNoo3N9pZ8/0.jpg",
+        link: "https://www.youtube.com/watch?v=KaNoo3N9pZ8"
       }
     };
 
@@ -101,7 +101,7 @@
       container.innerHTML = `
         <h2>${data.song}</h2>
         <img src="${data.image}" alt="${mood} music">
-        <a href="${data.link}" target="_blank">🎧 Listen on YouTube</a>
+        <a href="${data.link}" target="_blank">🎧 YouTube पर सुनें</a>
       `;
     }
   </script>
